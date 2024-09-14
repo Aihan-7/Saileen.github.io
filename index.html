@@ -3,41 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I LOVE U SAIDA</title>
+    <title>Aihan Loves Saida</title>
     <style>
         body {
-            background-color: #f0f8ff; /* Light blue background */
+            margin: 0;
+            padding: 0;
+            background-color: #f0e5e3;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        .love-message {
+            flex-direction: column;
             text-align: center;
         }
+
         h1 {
             font-size: 4em;
-            color: #ff69b4; /* Hot pink text */
-            text-shadow: 2px 2px 4px #000; /* Slight shadow */
+            color: #ff6b6b;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-in-out;
         }
-        p {
+
+        h2 {
             font-size: 2em;
-            color: #ff4500; /* Orange text */
-            animation: glowing 2s infinite; /* Glowing effect */
+            color: #333;
+            margin-top: 20px;
+            letter-spacing: 2px;
+            animation: heartBeat 1.5s infinite alternate;
         }
-        @keyframes glowing {
-            0% { text-shadow: 0 0 5px #ff4500, 0 0 10px #ff4500, 0 0 20px #ff4500; }
-            50% { text-shadow: 0 0 20px #ff4500, 0 0 30px #ff4500, 0 0 40px #ff4500; }
-            100% { text-shadow: 0 0 5px #ff4500, 0 0 10px #ff4500, 0 0 20px #ff4500; }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes heartBeat {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .heart {
+            color: #ff4b4b;
+            font-size: 100px;
+            margin-top: 30px;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(0.9);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(0.9);
+            }
+        }
+
+        .glowing-effect {
+            text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000, 
+                         0 0 20px #ff6b6b, 0 0 30px #ff6b6b, 0 0 40px #ff6b6b;
+            animation: glow 1.5s infinite;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000;
+            }
+            50% {
+                text-shadow: 0 0 20px #ff6b6b, 0 0 30px #ff6b6b, 0 0 40px #ff6b6b;
+            }
+            100% {
+                text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000;
+            }
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            font-size: 1.2em;
+            color: #777;
         }
     </style>
 </head>
 <body>
-    <div class="love-message">
-        <h1>I LOVE U</h1>
-        <p>SAIDA</p>
+    <div class="container">
+        <h1 class="glowing-effect">Aihan Loves Saida</h1>
+        <h2>Forever and Always ❤️</h2>
+        <div class="heart">💖</div>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Aihan & Saida. Built with love 💕
     </div>
 </body>
 </html>
