@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aihan ❤️ Saida - A Love Story</title>
+    <title>Aihan ❤️ Saida - A Timeless Love</title>
     <style>
-        /* Reset */
+        /* Global Reset */
         * {
             margin: 0;
             padding: 0;
@@ -14,13 +14,13 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to bottom right, #faf3f3, #f5f7fa);
-            color: #333;
+            background: linear-gradient(to bottom right, #faf3f3, #e6f0f5);
+            color: #2c3e50;
             overflow-x: hidden;
             scroll-behavior: smooth;
+            line-height: 1.8;
         }
 
-        /* Smooth transition */
         a, button {
             transition: all 0.3s ease;
         }
@@ -28,57 +28,58 @@
         /* Aesthetic Hero Section */
         .header {
             height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?romantic,couple') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/1600x900/?romantic,couple,night') no-repeat center center/cover;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            position: relative;
-            color: white;
+            color: #fff;
+            padding: 0 20px;
         }
 
         .header h1 {
-            font-size: 4.5em;
-            letter-spacing: 3px;
+            font-size: clamp(2.5em, 5vw, 4.5em);
+            letter-spacing: 4px;
             margin-bottom: 20px;
-            text-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-            animation: fadeInDown 1.5s ease-in-out;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         .header p {
-            font-size: 1.5em;
-            max-width: 700px;
-            margin-bottom: 40px;
-            line-height: 1.8;
+            font-size: clamp(1.2em, 2.5vw, 2em);
+            max-width: 800px;
+            margin-bottom: 50px;
+            line-height: 1.5;
             animation: fadeInUp 2s ease-in-out;
         }
 
         .cta-button {
-            padding: 15px 30px;
-            background-color: #ff6b6b;
+            padding: 15px 35px;
+            background-color: #e74c3c;
             border: none;
-            border-radius: 30px;
-            color: white;
+            border-radius: 50px;
+            color: #fff;
             font-size: 1.2em;
             cursor: pointer;
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 2.5s ease-in-out;
         }
 
         .cta-button:hover {
-            background-color: #ff4040;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            background-color: #c0392b;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
         }
 
-        /* Keyframes for smooth entrance */
-        @keyframes fadeInDown {
+        /* Animations */
+        @keyframes fadeIn {
             0% {
                 opacity: 0;
-                transform: translateY(-20px);
+                transform: scale(0.95);
             }
             100% {
                 opacity: 1;
-                transform: translateY(0);
+                transform: scale(1);
             }
         }
 
@@ -95,46 +96,40 @@
 
         /* Timeline Section */
         .timeline {
-            padding: 80px 20px;
+            padding: 100px 20px;
             background-color: #fff;
             text-align: center;
         }
 
         .timeline h2 {
-            font-size: 3em;
-            margin-bottom: 40px;
-            color: #ff6b6b;
+            font-size: clamp(2.5em, 3vw, 3.5em);
+            margin-bottom: 60px;
+            color: #e74c3c;
             position: relative;
         }
 
         .timeline h2::after {
             content: '';
-            width: 80px;
+            width: 100px;
             height: 4px;
-            background-color: #ff6b6b;
+            background-color: #e74c3c;
             display: block;
-            margin: 10px auto 0;
+            margin: 15px auto;
         }
 
         .timeline-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 40px;
-            max-width: 900px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
             margin: auto;
         }
 
         .timeline-item {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            background: #f5f5f5;
+            background: #f9f9f9;
+            padding: 30px;
             border-radius: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
 
@@ -143,94 +138,110 @@
         }
 
         .timeline-item h3 {
-            color: #333;
+            font-size: 1.8em;
+            color: #2c3e50;
             margin-bottom: 10px;
         }
 
         .timeline-item p {
-            color: #666;
-            max-width: 600px;
+            font-size: 1.1em;
+            color: #7f8c8d;
         }
 
         /* Cards Section */
         .cards-section {
-            padding: 80px 20px;
+            padding: 100px 20px;
             background-color: #faf3f3;
             text-align: center;
         }
 
         .cards-section h2 {
-            font-size: 3em;
-            margin-bottom: 40px;
-            color: #ff6b6b;
+            font-size: clamp(2.5em, 3vw, 3.5em);
+            margin-bottom: 60px;
+            color: #e74c3c;
         }
 
         .cards {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 40px;
             max-width: 1200px;
             margin: auto;
         }
 
         .card {
-            background-color: white;
-            width: 300px;
+            background-color: #fff;
             border-radius: 20px;
-            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             transition: all 0.3s ease;
-            cursor: pointer;
         }
 
         .card:hover {
             transform: translateY(-10px);
-            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.2);
         }
 
         .card img {
             width: 100%;
-            height: 200px;
+            height: 220px;
             object-fit: cover;
         }
 
         .card-content {
-            padding: 20px;
+            padding: 25px;
         }
 
         .card h3 {
-            font-size: 1.5em;
+            font-size: 1.6em;
             margin-bottom: 10px;
-            color: #333;
+            color: #2c3e50;
         }
 
         .card p {
             font-size: 1em;
-            color: #666;
+            color: #7f8c8d;
         }
 
         /* Footer */
         .footer {
-            background-color: #333;
+            background-color: #2c3e50;
             color: white;
-            padding: 20px 0;
+            padding: 40px 20px;
             text-align: center;
             position: relative;
         }
 
         .footer p {
             margin-bottom: 10px;
+            font-size: 1em;
+            color: #bdc3c7;
         }
 
         .footer a {
-            color: #ff6b6b;
+            color: #e74c3c;
             text-decoration: none;
             font-weight: 600;
         }
 
         .footer a:hover {
-            color: white;
+            color: #fff;
+        }
+
+        /* Responsive Tweaks */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 3em;
+            }
+
+            .header p {
+                font-size: 1.2em;
+            }
+
+            .cta-button {
+                font-size: 1em;
+                padding: 12px 25px;
+            }
         }
     </style>
 </head>
@@ -239,7 +250,7 @@
     <!-- Aesthetic Hero Section -->
     <section class="header">
         <h1>Aihan ❤️ Saida</h1>
-        <p>Celebrating the journey of love, forever and always. Two hearts, one soul, endless moments of joy.</p>
+        <p>Celebrating an eternal love story. Two hearts intertwined, together forever.</p>
         <button class="cta-button" onclick="scrollToSection('timeline')">Our Journey</button>
     </section>
 
@@ -248,47 +259,58 @@
         <h2>Our Love Story</h2>
         <div class="timeline-content">
             <div class="timeline-item">
-                <h3>How We Met</h3>
-                <p>It all began with a smile. The first time we saw each other, everything changed.</p>
+                <h3>First Glance</h3>
+                <p>A fleeting moment in the school bus. Two souls collided and nothing was ever the same.</p>
             </div>
             <div class="timeline-item">
-                <h3>First Day</h3>
-                <p>A glance from the school bus that brought us closer. The start of our forever.</p>
+                <h3>Annual Day</h3>
+                <p>A day filled with joy, laughter, and the beginning of countless memories.</p>
             </div>
             <div class="timeline-item">
                 <h3>2nd Anniversary</h3>
-                <p>From laughter to tears, through ups and downs, we grew stronger together.</p>
+                <p>From the first glance to this day, our love continues to grow stronger.</p>
             </div>
         </div>
     </section>
 
     <!-- Interactive Cards Section -->
     <section class="cards-section">
-        <h2>Bucketlists.</h2>
+        <h2>Goals!</h2>
         <div class="cards">
             <div class="card">
                 <img src="https://source.unsplash.com/300x200/?romantic,beach" alt="Memory 1">
                 <div class="card-content">
-                    <h3>Beach Day</h3>
-                    <p>A sunny day by the ocean, laughing and playing, making the best memories.</p>
+                    <h3>Beach Escape</h3>
+                    <p>Our feet in the sand, the sound of waves, and the joy of being together under the sun.</p>
                 </div>
             </div>
             <div class="card">
                 <img src="https://source.unsplash.com/300x200/?sunset,love" alt="Memory 2">
                 <div class="card-content">
-                    <h3>Sunset Evening</h3>
-                    <p>Watching the sunset hand-in-hand, our hearts were as warm as the sky.</p>
+                    <h3>Sunset Embrace</h3>
+                    <p>Watching the sunset, knowing that our love shines just as brightly.</p>
                 </div>
             </div>
             <div class="card">
                 <img src="https://source.unsplash.com/300x200/?couple,night" alt="Memory 3">
                 <div class="card-content">
-                    <h3>Stargazing Night</h3>
-                    <p>Under a blanket of stars, we dreamed about our future together.</p>
+                    <h3>Under the Stars</h3>
+                    <p>Stargazing and dreaming of our future together, hand in hand.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <
+    <footer class="footer">
+        <p>&copy; 2024 Aihan & Saida - Forever Together</p>
+    </footer>
+
+    <script>
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>
